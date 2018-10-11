@@ -20,3 +20,4 @@ def doolittle(a, n):
             else:
                 u[i, j] = a[i, j]  # 上三角矩阵
     return a,l,u
+

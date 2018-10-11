@@ -1,5 +1,5 @@
 #define DIM 5
-#include "GaussElimination.c"
+#include "gelim.c"
 extern int gelim( int process, double A[DIM][DIM], double b[DIM]);
 int main(int argc, char const *argv[])
 {
@@ -16,12 +16,12 @@ int main(int argc, char const *argv[])
     if( gelim(1, A, b) == 1 ){
         printf(" The linear system hasn't solution!\n");
         printf(" Strike any key to exit!\n");
-        getch();
+        getchar();
         exit(1);
     }
     printf("Gauss elimination method:\n");
     for(i=0; i<DIM; i++)
         printf("   %12.6f\n", b[i]);
-    getch();
+    getchar();
     return 0;
 }
