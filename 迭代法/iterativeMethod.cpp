@@ -24,7 +24,7 @@ int main(){
         cout << X[i] << endl;
     }
 }
-void Jacobi(const vector<vector<T> >& A, const vector<T>& B, vector<T>& X){
+void Jacobi(const vector<vector<T> >& A, const vector<T>& B, vector<T>& X){  //雅可比迭代
     vector<T> X0;
     for (int n=0; n<MAX; n++){
         X0.assign(X.begin(), X.end());
@@ -44,7 +44,7 @@ void Jacobi(const vector<vector<T> >& A, const vector<T>& B, vector<T>& X){
         << endl;
     }
 }
-void G_S(const vector<vector<T> >& A, const vector<T>& B, vector<T>& X){
+void G_S(const vector<vector<T> >& A, const vector<T>& B, vector<T>& X){  //高斯塞德尔迭代
     vector<T> X0;
     for (int n=0; n<MAX; n++){
         X0.assign(X.begin(), X.end());
@@ -64,7 +64,7 @@ void G_S(const vector<vector<T> >& A, const vector<T>& B, vector<T>& X){
         << endl;
     }
 }
-void SOR(const vector<vector<T> >& A, const vector<T>& B, vector<T>& X, const T w){
+void SOR(const vector<vector<T> >& A, const vector<T>& B, vector<T>& X, const T w){  //连续过松弛迭代
     vector<T> X0;
     for (int n=0; n<MAX; n++){
         X0.assign(X.begin(), X.end());
