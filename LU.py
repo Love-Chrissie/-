@@ -20,4 +20,10 @@ def doolittle(a, n):
             else:
                 u[i, j] = a[i, j]  # 上三角矩阵
     return a,l,u
-
+if __name__ == "__main__":
+    A = np.array([[12.0, -3.0, 3.0],
+                  [-18.0, 3.0, 1.0],
+                  [1.0, 1.0, 3.0]])
+    _, L, U = doolittle(A, 3)
+    print(L)
+    print(U)
